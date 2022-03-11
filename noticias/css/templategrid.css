@@ -1,0 +1,223 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+/* ESTILO PARA EL BODY EN GRAL */
+body{
+    font-family: 'Abel', sans-serif;
+    background: #f0f5f5;
+}
+
+
+/* DEFINIENDO LA GRILLA  */
+.container{
+    display: grid;
+
+    grid-template-areas: "header header header"
+                         "navbar navbar navbar"
+                         "content content sidebar"
+                         "content content sidebar"
+                         "footer footer footer";
+    width: 95%;
+    margin: auto;
+}
+
+
+/* DEFINIENDO EL ENCABEZADO*/
+.container > .footer,
+.container > .header
+{
+    background: #669999;
+    padding: 20px;
+
+}
+
+
+.container > .header{
+    background: #11aaaa;
+    grid-area: header;
+
+    display: grid;
+    grid-template-areas: "logo eslogan  eslogan redes"
+}
+
+.container > .header > .logo{
+    grid-area: logo;
+    max-width: 280px; 
+    border-right: 2px solid #000000;
+    margin-right: 10px; 
+}
+
+.container > .header > .logo > img{
+    max-width: 250px;
+}
+
+.container > .header > .eslogan{
+    grid-area: eslogan;
+    margin: 0px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.container > .header > .redes{
+    grid-area: redes;
+    text-align: center;
+    font-size: 3em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.container > .header > .redes > a{
+    padding: 5px;
+    margin: 10px;
+    
+}
+
+
+/*Definiendo el menu de navegacion*/
+.container > .main-menu{
+    grid-area: navbar;
+
+    margin-bottom: 10px;
+    background: #006699;
+    
+    /*  Usamos flex para alinear el contenido del menu  */
+    display: flex;
+    justify-content: center;
+}
+
+.container > .main-menu > ul > li{
+    list-style: none;
+    padding: 5px;
+    float: left;
+    
+}
+
+.container >.main-menu > ul > li > a{
+    text-decoration: none;
+    color: #000000;
+    padding: 5px;
+    font-size: 20px;
+}
+
+.container >.main-menu > ul > li > a:hover{
+    border-bottom: 2px solid #000000;
+    color: #fff;
+}
+
+
+/*  ESTILO PARA CONENIDO    */
+.container > .container-content{
+    grid-area: content;
+    background:#f0f0f0;
+    width: 90%;
+    padding: 10px;
+    margin: auto;
+}
+
+.container > .container-content > .content > h1{
+    font-size: 3em;
+    padding: 10px;
+    border-bottom: 1px solid gray;
+
+}
+
+.container > .container-content > .content > p{
+    padding: 10px;
+}
+
+.container > .container-content > .content > h2{
+    padding: 10px;
+}
+
+.container > .container-content > .content > h3{
+    padding: 10px;
+}
+
+.container > .container-content > .img-content{
+    text-align: center;
+}
+
+.container > .container-content > .img-content > img{
+    width: 500px;
+}
+
+
+/* DEFINIENDO EL SIDEBAR */
+.container > .sidebar {
+    grid-area: sidebar;
+    max-width: 300px;
+
+    border-left: 2px solid gray;
+    padding-left: 5px;
+    
+    margin-bottom: 5px;
+
+
+}
+
+
+.container > .sidebar > .archivo .art1{
+    display: grid;
+    grid-template-areas: "img titulo";
+
+    border-bottom: 1px solid grey;
+}
+
+.container > .sidebar > .archivo > .art1 > .img-art1, .img-art2, .img-art3, .img-art4{
+    grid-area: img;
+    padding: 5px;
+}
+
+.img-art1 > img,
+.img-art2 > img,
+.img-art3 > img,
+.img-art4 > img{
+    max-width: 80px;
+
+}
+
+.container > .sidebar > .archivo > .art1, .art2, .art3, .art4 > h4{
+    grid-area: titulo;
+
+}
+
+.container > .sidebar > .archivo .art2{
+    display: grid;
+    grid-template-areas: "img titulo";
+    border-bottom: 1px solid grey;
+}
+
+.container > .sidebar > .archivo .art3{
+    display: grid;
+    grid-template-areas: "img titulo";
+    border-bottom: 1px solid grey;
+}
+
+.container > .sidebar > .archivo .art4{
+    display: grid;
+    grid-template-areas: "img titulo";
+}
+
+.container > .sidebar > .linksSidebar{
+    text-align: center;
+    margin-top: 10px;
+    border-top: 2px solid gray;
+    padding-top: 5px;
+}
+
+.container > .sidebar > .linksSidebar img{
+    max-width: 250px;   
+}
+
+
+/* DEFINIENDO EL FOOTER */
+.container > .footer{
+    grid-area: footer;
+    background: #669999;
+    padding: 20px;
+    text-align: center;
+}

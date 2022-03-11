@@ -1,0 +1,9 @@
+NOTICIAS NOVEDADES:
+
+La novedad deberá estar compuesta por:
+- Imagen (puede o no estar, si no está deberá mostrar el logo de la escuela)
+- Titulo
+- Resumen
+- Desarrollo
+
+Debe haber una página de Novedad que se visualice la noticia con los datos guardados.

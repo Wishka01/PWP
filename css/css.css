@@ -1,0 +1,403 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+/* ESTILO PARA EL BODY EN GRAL */
+body{
+    font-family: 'Abel', sans-serif;
+    background: #f0f5f5;
+}
+
+
+/* DEFINIENDO LA GRILLA  */
+.container{
+    display: grid;
+
+    grid-template-areas: "header header header"
+                         "navbar navbar navbar"
+                         "noticias noticias sidebar"
+                         "noticias noticias sidebar"
+                         "footer footer footer";
+    width: 95%;
+    margin: auto;
+}
+
+
+/*  Contenedor historia */
+.container-historia{
+    display: grid;
+
+    grid-template-areas: "header header header"
+                         "navbar navbar navbar"
+                         "historia historia sidebar"
+                         "historia historia sidebar"
+                         "footer footer footer";
+    width: 95%;
+    margin: auto;
+}
+
+/*  Contenedor de contacto  */
+.container-contacto{
+    display: grid;
+
+    grid-template-areas: "header header header"
+                         "navbar navbar navbar"
+                         "contacto contacto contacto"
+                         "footer footer footer";
+    width: 95%;
+    margin: auto;
+}
+
+/* DEFINIENDO EL ENCABEZADO*/
+.container-contacto > .header,
+.container-historia > .header,
+.container > .header{
+    background: #669999;
+	background-image: url(../img/postslider1_finito.jpg);
+    grid-area: header;
+    padding: 20px;
+    display: grid;
+    grid-template-areas: "logo eslogan  eslogan redes"
+}
+
+
+.container-contacto > .header > .logo,
+.container-historia > .header > .logo,
+.container > .header > .logo{
+    grid-area: logo;
+    max-width: 280px; 
+    border-right: 2px solid #000000;
+    margin-right: 10px; 
+}
+
+.container-contacto > .header > .logo > img,
+.container-historia > .header > .logo > img,
+.container > .header > .logo > img{
+    max-width: 250px;
+}
+
+.container-contacto > .header > .eslogan,
+.container-historia > .header > .eslogan,
+.container > .header > .eslogan{
+    grid-area: eslogan;
+    margin: 0px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.container-contacto > .header > .redes,
+.container-historia > .header > .redes,
+.container > .header > .redes{
+    grid-area: redes;
+    text-align: center;
+    font-size: 3em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.container-contacto > .header > .redes > a,
+.container-historia > .header > .redes > a,
+.container > .header > .redes > a{
+    padding: 5px;
+    margin: 10px;
+    
+}
+
+
+/*Definiendo el menu de navegacion*/
+.container-contacto > .main-menu,
+.container-historia > .main-menu,
+.container > .main-menu{
+    grid-area: navbar;
+
+    margin-bottom: 10px;
+    background: #006699;
+    
+    /*  Usamos flex para alinear el contenido del menu  */
+    display: flex;
+    justify-content: center;
+}
+
+.container-contacto > .main-menu > ul > li,
+.container-historia > .main-menu > ul > li,
+.container > .main-menu > ul > li{
+    list-style: none;
+    padding: 5px;
+    float: left;
+    
+}
+
+.container-contacto > .main-menu > ul > li > a,
+.container-historia >.main-menu > ul > li > a,
+.container >.main-menu > ul > li > a{
+    text-decoration: none;
+    color: #000000;
+    padding: 5px;
+    font-size: 20px;
+}
+
+.container-contacto > .main-menu > ul > li > a:hover,
+.container-historia >.main-menu > ul > li > a:hover,
+.container >.main-menu > ul > li > a:hover{
+    border-bottom: 2px solid #000000;
+    color: #fff;
+}
+
+
+/*-------------------------------------------------------------------------------------------------*/
+/*-------------------------------------------------------------------------------------------------*/
+/* DEFINIENDO NOTICIAS */
+.container > .noticias{
+    grid-area: noticias;
+}
+
+.container > .noticias > .noticia1, .noticia2, .noticia3, .noticia4{
+    display: grid;
+    grid-template-areas: "imagen contenido";
+    padding: 5px;
+    margin: 10px;
+
+}
+
+.container > .noticias > .noticia1 > .noticia1-contenido,
+.container > .noticias > .noticia2 > .noticia2-contenido,
+.container > .noticias > .noticia3 > .noticia3-contenido,
+.container > .noticias > .noticia4 > .noticia4-contenido{
+    grid-area: contenido;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+
+
+
+.container > .noticias > .noticia1 > .noticia1-img,
+.container > .noticias > .noticia2 > .noticia2-img, 
+.container > .noticias > .noticia3 > .noticia3-img,
+.container > .noticias > .noticia4 > .noticia4-img {
+    grid-area: imagen;
+    width: 200px;
+    display: flex;
+    justify-content: center;
+    margin-right: 10px;
+}
+
+.container > .noticias > .noticia1 > .noticia1-img > img,
+.container > .noticias > .noticia2 > .noticia2-img > img, 
+.container > .noticias > .noticia3 > .noticia3-img > img,
+.container > .noticias > .noticia4 > .noticia4-img > img{
+    width: 200px;
+    height: 150px;
+    
+}
+
+.container > .noticias > .noticia1 > .noticia1-contenido > a,
+.container > .noticias > .noticia2 > .noticia2-contenido > a,
+.container > .noticias > .noticia3 > .noticia3-contenido > a,
+.container > .noticias > .noticia4 > .noticia4-contenido > a{
+    text-decoration: none;
+    color: #11aaaa;
+}
+
+.container > .noticias > .noticia1 > .noticia1-contenido > a:hover,
+.container > .noticias > .noticia2 > .noticia2-contenido > a:hover,
+.container > .noticias > .noticia3 > .noticia3-contenido > a:hover,
+.container > .noticias > .noticia4 > .noticia4-contenido > a:hover{
+    text-decoration: underline;
+
+    
+}
+
+
+/* DEFINIENDO EL SIDEBAR */
+.container-historia > .sidebar,
+.container > .sidebar {
+    grid-area: sidebar;
+    max-width: 300px;
+
+    border-left: 2px solid gray;
+    padding-left: 5px;
+    
+    margin-bottom: 5px;
+
+
+}
+
+
+.container-historia > .sidebar > .archivo .art1
+.container > .sidebar > .archivo .art1{
+    display: grid;
+    grid-template-areas: "img titulo";
+
+    border-bottom: 1px solid grey;
+}
+
+.container-historia > .sidebar > .archivo > .art1 > .img-art1, .img-art2, .img-art3, .img-art4,
+.container > .sidebar > .archivo > .art1 > .img-art1, .img-art2, .img-art3, .img-art4{
+    grid-area: img;
+    padding: 5px;
+}
+
+.img-art1 > img,
+.img-art2 > img,
+.img-art3 > img,
+.img-art4 > img{
+    max-width: 80px;
+
+}
+
+.container-historia > .sidebar > .archivo > .art1, .art2, .art3, .art4 > h4,
+.container > .sidebar > .archivo > .art1, .art2, .art3, .art4 > h4{
+    grid-area: titulo;
+
+}
+
+.container-historia > .sidebar > .archivo .art1,
+.container > .sidebar > .archivo .art1{
+    display: grid;
+    grid-template-areas: "img titulo";
+    border-bottom: 1px solid grey;
+}
+
+.container-historia > .sidebar > .archivo .art2,
+.container > .sidebar > .archivo .art2{
+    display: grid;
+    grid-template-areas: "img titulo";
+    border-bottom: 1px solid grey;
+}
+
+.container-historia > .sidebar > .archivo .art3,
+.container > .sidebar > .archivo .art3{
+    display: grid;
+    grid-template-areas: "img titulo";
+    border-bottom: 1px solid grey;
+}
+.container-historia > .sidebar > .archivo .art4,
+.container > .sidebar > .archivo .art4{
+    display: grid;
+    grid-template-areas: "img titulo";
+}
+
+.container-historia > .sidebar > .linksSidebar,
+.container > .sidebar > .linksSidebar{
+    text-align: center;
+    margin-top: 10px;
+    border-top: 2px solid gray;
+    padding-top: 5px;
+}
+
+.container-historia > .sidebar > .linksSidebar img,
+.container > .sidebar > .linksSidebar img{
+    max-width: 250px;   
+}
+
+
+/* DEFINIENDO EL FOOTER */
+.container-contacto > .footer,
+.container-historia > .footer,
+.container > .footer{
+    grid-area: footer;
+    background: #669999;
+    padding: 20px;
+    text-align: center;
+}
+
+
+/*  DEFINIENDO EL ESTILO PARA EL PAGINA DE HISTORIA */
+
+.container-historia > .container-content{
+    grid-area: historia;
+    background: #f0f0f0;
+    width: 95%;
+    margin: auto;
+
+}
+
+.container-historia > .container-content > .content > h2, p{
+    padding: 10px;
+}
+
+.container-historia > .container-content > .img-content{
+    display: flex;
+    justify-content: center;
+}
+
+.container-historia > .container-content > .img-content > img{
+    width: 700px;
+    margin-bottom: 10px;
+}
+
+/*  DEFINIENDO EL ESTILO PARA LA PAGINA DE CONTACTO  */
+.container-contacto > .contacto{
+    display: grid;
+
+    grid-template-areas: "formulario mapa";
+}
+
+.container-contacto > .contacto > .contact-div{
+    grid-area: formulario;
+    padding: 10px;
+
+
+}
+
+.container-contacto > .contacto > .como-llegar{
+    grid-area: mapa;
+    padding: 10px;
+}
+
+
+.container-contacto > .contacto > .contact-div > p{
+    font-size: 18px;
+}
+
+.container-contacto > .contacto > .contact-div > p > i{
+    padding-left: 5px;
+    padding-right: 5px;
+
+}
+
+.container-contacto > .contacto > .contact-div > .contact-form > form{
+    border-top: 1px solid gray;
+    padding-top: 5px;
+    width: 80%;
+    margin: auto;
+}
+
+.container-contacto > .contacto > .contact-div > .contact-form > form > input[type=email],
+.container-contacto > .contacto > .contact-div > .contact-form > form > input[type=tel],
+.container-contacto > .contacto > .contact-div > .contact-form > form > input[type=text]{
+    display: inline-block;
+    outline: none;
+    border: none;
+    border-bottom: #669999 2px solid;
+    width: 200px;
+    
+    font-size: 17px;
+    margin: 5px;
+    padding: 10px;
+}
+
+.container-contacto > .contacto > .contact-div > .contact-form > form > input[type=email]:focus,
+.container-contacto > .contacto > .contact-div > .contact-form > form > input[type=tel]:focus,
+.container-contacto > .contacto > .contact-div > .contact-form > form > input[type=text]:focus{
+    border-bottom: 2px solid #5bd6d6;
+}
+
+.container-contacto > .contacto > .contact-div > .contact-form > form > textarea{
+    border: none;
+    resize: none;
+    width: 100%;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+.container-contacto > .contacto > .contact-div > .contact-form > form > input[type=submit]{
+    padding: 5px;
+    background: #53b6e7;
+    border: none;
+    width: 100%;
+}
