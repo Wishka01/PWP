@@ -1,0 +1,26 @@
+.noticia-abierta {
+    width: 80vw;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.noticia-abierta-titulo {
+    margin: 20px 0;
+}
+
+.noticia-abierta p {
+    font-size: 1.4rem;
+}
+
+.noticia-abierta-descCorta {
+    max-width: 70vw;
+    margin-top: 15px;
+    font-weight: bold;
+}
+
+.noticia-abierta-descLarga {
+    max-width: 70vw;
+    margin-top: 35px;
+}

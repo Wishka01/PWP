@@ -16,7 +16,7 @@
 }
 
 .contenedor_img {
-    width: 14rem;
+    width: 20%;
     height: 8rem;
     border: 1px solid #000;
     border-top-left-radius: 10px;
@@ -35,7 +35,7 @@
     align-items: flex-start;
     padding-left: 20px;
     background-color: rgb(230, 230, 255);
-    width: 75%;
+    width: 80%;
 }
 
 .cuerpo > p {

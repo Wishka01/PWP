@@ -9,7 +9,8 @@
     <!--GOOGLEFONTS-->
     <link href="https://fonts.googleapis.com/css2?family=Abel&display=swap" rel="stylesheet">
 
-    <link rel="stylesheet" href="css/templategrid.css">
+    <link rel="stylesheet" href="../css/templategrid.css">
+    <link rel="stylesheet" href="./css/noticiaAbierta.css">
 </head>
 
 <style type="text/css">
@@ -42,7 +43,24 @@
         <main class="container-content">
             <!-- La noticia -->
             <?php
-                
+                include("NoticiaDAO.php");
+                $noticiaDAO = new NoticiaDAO();
+
+                $idNoticia = $_GET['idNoticia'];
+
+                $result = $noticiaDAO->selectById($idNoticia);
+
+                $row = $result->fetch_array();
+
+                echo("
+                <div class=\"noticia-abierta\">
+                    <h2 class=\"noticia-abierta-titulo\">" . $row['titulo'] . "</h2>
+                    <img class=\"noticia-abierta-img\" src=" . $row['urlImg'] . ">
+                    <p class=\"noticia-abierta-descCorta\">" . $row['descCorta'] . "</p>
+                    <p class=\"noticia-abierta-descLarga\">" . $row['descLarga'] . "</p>
+                </div>
+                ");
+
             ?>
 
         </main>
